@@ -25,3 +25,4 @@ console.log(pessoa04.nome, pessoa04.sobrenome, pessoa04.idade)
 console.log(pessoa05.nome, pessoa05.sobrenome, pessoa05.idade)
 console.log(pessoa06.nome, pessoa06.sobrenome, pessoa06.idade)
 
+console.log('+++', pessoa02)

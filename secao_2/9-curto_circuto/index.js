@@ -7,7 +7,7 @@ console.log('Luiz' && 'Maria' && NaN);
 null / undefined
 NaN 
 
- Quaisquer valores diferentes desses, são avaliados em true */
+ Quaisquer valores diferentes desses, são avaliados e m true */
 
 /* CONDICIONAIS SIMPLIFICADAS: */
 

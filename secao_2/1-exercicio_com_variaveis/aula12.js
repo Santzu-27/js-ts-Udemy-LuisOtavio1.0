@@ -2,8 +2,8 @@ let varA = 'A'
 let varB = 'B' 
 let varC = 'C' 
 
-/* A váriavel A deve receber o valor de B.
-A váriavel B deve receber o valor de C.
+/* A váriavel A deve áriavel B deve receber receber o valor de B.
+A vo valor de C.
 A váriavel C deve receber o valor de A.
 Atribuindo apenas as váriaveis*/
 
