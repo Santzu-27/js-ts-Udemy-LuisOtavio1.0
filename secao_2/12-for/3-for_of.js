@@ -9,6 +9,6 @@ for (let value of names){
 }
 //Similar:
 console.log('/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#/#'); console.log();
-names.forEach(function(e){
-    console.log(e)
+names.forEach(function(v, i, array){
+    console.log(v, i, array)
 })
