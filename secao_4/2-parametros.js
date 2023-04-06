@@ -19,7 +19,7 @@ function soma(a, b, c){
 } 
 
 soma(5, 10, 15, 20, 25, 30, 35, 40, 45);
-console.log('================================================================')y60
+console.log('================================================================');
 console.log();
 function somaUndefined(a, b = 0){ //Defini um valor PADRÃO para o b, caso não seja declarado nenhum argumento para o mesmo
     console.log(a + b)
