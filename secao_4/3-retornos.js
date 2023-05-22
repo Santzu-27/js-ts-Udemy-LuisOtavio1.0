@@ -15,7 +15,7 @@ function criaMultiplicador(multiplicador){
     }
 }
 
-const duplica = criaMultiplicador(2);
+const duplica = criaMultiplicador(2);  
 const triplica = criaMultiplicador(3);
 const quadriplica = criaMultiplicador(4);
 
