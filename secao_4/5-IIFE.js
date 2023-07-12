@@ -1,7 +1,7 @@
 //Funções Imediatas -> Immediatly Invoked Function Expression
-const myName = 'Test';
+const age = 'Test';
 
-(function(){
+(function(age, weight, height){
     const lastName = 'Santos';
 
     function createName(myName){
@@ -13,6 +13,7 @@ const myName = 'Test';
     }
 
     sayName();
-})();
+    console.log(age, weight, height);
+})(21, 70, 170);
 console.log();
 // console.log(myName);
