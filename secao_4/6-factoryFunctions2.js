@@ -17,7 +17,9 @@ function createPerson(personName, personLastName, weightX, heightX){
         },
         set fullName(value){
             value = value.split(' ');
-            console.log(value);
+            this.personName = value.shift();
+            this.personLastName = value.join(' ');
+            // console.log(value);
         } 
 
     }
@@ -31,4 +33,5 @@ console.log(p2.weight, p2.height + ' = '+ p2.imc);
 console.log();
 console.log();
 p1.fullName = 'Gabriel Santos de Souza';
-console.log(p1.fullName);
+console.log(p1.personLastName);
+console.log(p1.personName);
