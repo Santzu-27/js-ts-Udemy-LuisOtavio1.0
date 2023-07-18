@@ -35,3 +35,5 @@ console.log();
 p1.fullName = 'Gabriel Santos de Souza';
 console.log(p1.personLastName);
 console.log(p1.personName);
+const p3 = createPerson('Joao', 'Santos', 74, 1.70);
+const p4 = createPerson('Ariel', 'Paim', 50, 1.48);
