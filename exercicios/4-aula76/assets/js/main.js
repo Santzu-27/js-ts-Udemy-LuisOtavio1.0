@@ -6,7 +6,8 @@ function createCalculator(){
                 this.btnsClick();
             },
             doMath(){
-
+                const count = this.display.value;
+                console.log(count)
             },
             
             clearDisplay(){
