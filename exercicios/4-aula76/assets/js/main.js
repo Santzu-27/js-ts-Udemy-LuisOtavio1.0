@@ -4,12 +4,32 @@ function createCalculator(){
 
             start(){
                 this.btnsClick();
+                this.pressEnter();
             },
+
             doMath(){
-                const count = this.display.value;
-                console.log(count)
+                let count = this.display.value;
+                try{
+                    count = eval(count);
+                    if(Number.isNaN(count)){
+                        alert('Conta Inválida')
+                        return;
+                    }
+                    
+                    this.display.value = count;
+                }catch(e){
+                    alert('Conta Inválida')
+                }
             },
             
+            pressEnter(){
+                this.display.addEventListener('keydown', e =>{
+                    if(e.keyCode === 13){
+                        this.doMath();
+                    }
+                })
+            },
+
             clearDisplay(){
                 this.display.value = '';
             },
@@ -37,6 +57,8 @@ function createCalculator(){
                     if(el.classList.contains('btn-eq')){
                         this.doMath();
                     }
+
+                    this.display.focus();
                 });
             },
 
