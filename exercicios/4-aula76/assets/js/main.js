@@ -5,6 +5,9 @@ function createCalculator(){
             start(){
                 this.btnsClick();
             },
+            doMath(){
+
+            },
             
             clearDisplay(){
                 this.display.value = '';
@@ -13,6 +16,7 @@ function createCalculator(){
             delOne(){
                 this.display.value = this.display.value.slice(0, -1);
             },
+
 
             btnsClick(){
                 document.addEventListener('click', (e) => {
@@ -28,6 +32,9 @@ function createCalculator(){
 
                     if(el.classList.contains('btn-del')){
                         this.delOne();
+                    }
+                    if(el.classList.contains('btn-eq')){
+                        this.doMath();
                     }
                 });
             },
