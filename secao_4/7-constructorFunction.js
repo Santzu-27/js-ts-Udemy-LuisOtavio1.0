@@ -8,12 +8,13 @@ function Person(personName, personLastName){
     this.personLastName = personLastName;
     this.fullName = `${personName} ${personLastName}`
 
-    this.method = (e) => {
-        console.log(this.fullName);
+    this.method = ()=> {
+        console.log(id);
+        console.log(this.fullName)
     }
 }
 
 const person1 = new Person("Gabriel", "Santos de Souza");
 
-console.log(person1);
-console.log(person1.method);
+// console.log(person1)
+person1.method();

@@ -75,8 +75,10 @@ function Calculator(){
     const display = document.querySelector('.display');
 
     this.start = (e) => {
-
+        this.btnsClick();
+        this.pressEnter();
     }
 }
 
+console.log(Calculator.display);
 const calculator = new Calculator();
