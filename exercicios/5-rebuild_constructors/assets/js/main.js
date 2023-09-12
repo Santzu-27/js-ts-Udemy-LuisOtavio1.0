@@ -72,13 +72,68 @@
 // calculadora.start();
 
 function Calculator(){
-    const display = document.querySelector('.display');
-
-    this.start = (e) => {
+    this.display = document.querySelector('.display');
+    
+    this.start = function() {
         this.btnsClick();
         this.pressEnter();
     }
+
+    this.doMath = function() {
+        let count = this.display.value;
+        try{
+            count = eval(count);
+            if(Number.isNaN(count)){
+                alert("Conta Inválida");
+                return
+            }
+            this.display.value = count;
+        }catch(e){
+            alert("Conta Inválida");     
+        }   
+    }
+
+    this.pressEnter = (el) => {
+        this.display.addEventListener("keydown", (e) => {
+            if(e.keyCode === 13){
+                this.doMath();
+            }
+        })
+    }
+
+    this.clearDisplay = function() {
+        this.display.value = "";
+    }
+
+    this.delOne = function() {
+        this.display.value = this.display.value.slice(0, -1);
+    }
+
+    this.btnsClick = function() {
+        document.addEventListener("click", e => {
+            const el = e.target;
+            if(el.classList.contains('btn-num')){
+                this.btnsDisplay(el.innerText);
+            }
+            if(el.classList.contains('btn-clear')){
+                this.clearDisplay();
+            }
+
+            if(el.classList.contains('btn-del')){
+                this.delOne();
+            }   
+            if(el.classList.contains('btn-eq')){
+                this.doMath();
+            }
+            this.display.focus();
+
+        })
+    }
+
+    this.btnsDisplay = function(valor){
+        this.display.value += valor;
+    }
 }
 
-console.log(Calculator.display);
 const calculator = new Calculator();
+calculator.start();
