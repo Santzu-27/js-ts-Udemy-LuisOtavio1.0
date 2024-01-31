@@ -14,3 +14,10 @@ const persons = [
 
 const theirNames = persons.map(person => person.name);
 console.log(theirNames);
+
+const withId = persons.map(function(person, i){
+    const newPerson = {...person} //Criar um 'new" pq senão passa por referencia
+    newPerson.id = i;
+    return newPerson
+})
+console.log(withId);
