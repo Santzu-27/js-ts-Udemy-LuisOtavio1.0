@@ -12,4 +12,4 @@ const objC = {
 
 Object.setPrototypeOf(objB, objA);
 Object.setPrototypeOf(objC, objB);
-console.log(objC.chaveA);
+console.log(objC.chaveA);       
