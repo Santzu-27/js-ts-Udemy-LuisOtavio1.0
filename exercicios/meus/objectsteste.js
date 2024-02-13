@@ -1,0 +1,5 @@
+const Pessoas = [];
+
+function PessoaConstructor(){
+    
+}

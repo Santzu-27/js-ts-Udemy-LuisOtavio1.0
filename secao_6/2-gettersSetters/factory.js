@@ -13,4 +13,5 @@ function createProduct(name){
 const p1 = createProduct("Shirt");
 console.log(p1.name);
 p1.name = "Any Thing";
-console.log(p1.name);
+p1.price    = 50;
+console.log(p1);
