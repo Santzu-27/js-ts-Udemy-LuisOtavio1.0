@@ -26,8 +26,19 @@ console.log(p2)
 
 /////////////////////////////////////////////////
 // Setar diretamente o prototype de um objeto criado ::::
-const p3 = Object.create(Product.prototype); 
-console.log(p3);
-p3.price = 100;
-p3.discount(80);
+const p3 = Object.create(Product.prototype, {
+    name: {
+        value: 'Jordan II',
+        writable: false,
+        configurable: false,
+        enumerable: true
+    },
+    price: {
+        value: 45,
+        writable: true,
+        configurable: false,
+        enumerable: true
+    }
+}); 
+p3.discount(50);
 console.log(p3);
