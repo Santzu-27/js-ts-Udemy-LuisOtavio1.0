@@ -5,7 +5,10 @@ function Account(agency, account, balance){
 }
 
 Account.prototype.withdraw = function(value){
-    if(this.balance < value) {console.log(`Insufficient balance: R$${this.balance}`); return};
+    if(this.balance < value) {
+        console.log(`Insufficient balance: R$${this.balance}`); return
+    };
+    
     this.balance -= value;
     console.log(`Withdrawn.`)
     console.log(`Balance: R$${this.balance}`)
