@@ -18,6 +18,8 @@ class Car{
 }
 
 const c1 = new Car('Fusca');
+
 c1.speed = 200; // Não vai funcionar devido a proteção do Setter;
 c1.speed = 10;
+
 console.log(c1);
