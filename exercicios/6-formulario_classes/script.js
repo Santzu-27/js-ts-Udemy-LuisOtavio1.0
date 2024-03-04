@@ -25,6 +25,7 @@ class Form{
     }
     createError(field, id){
         const div = document.createElement('div');
+        if(id === 'rep-senha'){id = 'Repetir Senha'}
         div.innerHTML = `Campo ${id} deve ser preenchido.`;
         div.classList.add('error-text');
         field.insertAdjacentElement('afterend', div)
