@@ -11,7 +11,7 @@ html{
 }
 body{
     background-color: rgb(62, 75, 255);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:  Verdana, sans-serif;
     font-size: 1.6em;
 }
 main{
@@ -45,6 +45,6 @@ input{
 
 .error-text{
     color: red;
-    margin: -1.5em 0 1.1em 0;
-    font-size: .8em;
+    margin: -1.15em 0 0 0;
+    font-size: .65em;
 }
