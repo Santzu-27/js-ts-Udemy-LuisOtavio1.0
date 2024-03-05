@@ -30,7 +30,8 @@ ul{
     font-size: .8em;
 }
 li{
-    width: fit-content;
+    text-align: left;
+    width: 100%;
 }
 form{
     text-align: left;
@@ -45,6 +46,6 @@ input{
 
 .error-text{
     color: red;
-    margin: -1.15em 0 0 0;
+    margin: 0 0 .52em 0;
     font-size: .65em;
 }

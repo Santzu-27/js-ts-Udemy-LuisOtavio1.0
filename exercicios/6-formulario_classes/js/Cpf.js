@@ -1,5 +1,5 @@
 // 705.484.450-52 070.987.720-03
-class CPFvalidate {
+class CPF {
   constructor(sentCpf) {
     Object.defineProperty(this, 'cleanCpf', {
       writable: false,
@@ -15,8 +15,8 @@ class CPFvalidate {
 
   genNewCpf() {
     const whitoutLastDigits = this.cleanCpf.slice(0, -2);
-    const digit1 = CPFvalidate.digitGenerate(whitoutLastDigits);
-    const digit2 = CPFvalidate.digitGenerate(whitoutLastDigits + digit1);
+    const digit1 = CPF.digitGenerate(whitoutLastDigits);
+    const digit2 = CPF.digitGenerate(whitoutLastDigits + digit1);
     this.newCpf = whitoutLastDigits + digit1 + digit2;
   }
 
