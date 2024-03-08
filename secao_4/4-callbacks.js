@@ -22,7 +22,7 @@ function f3(callback){
     }, rand());
 }
 
-console.log(rand());
+// console.log(rand());
 
 // f1(function(){
 //     f2(function(){
@@ -39,7 +39,7 @@ f1(f1Callback);
 
 
 function f1Callback(){
-    f2(f2Callback);
+    f2('a');
 }
 
 function f2Callback(){
@@ -50,4 +50,4 @@ function f3Callback(){
     console.log('Ola cambanda');
 }
 
-f1(() => f2(() => f3(() => console.log('Olá Mundo!'))));
+// f1(() => f2(() => f3(() => console.log('Olá Mundo!'))));
