@@ -1,17 +1,20 @@
 function wait(msg, time){
     return new Promise((resolve, reject)=>{
-        if(typeof msg !== 'string') reject(false);
+        if(typeof msg !== 'string'){ 
+            reject(false);
+            return
+        };
         setTimeout(() => {
-            resolve(msg);
+            resolve(msg.toUpperCase() + ' PASSEI');
         }, time);
     });
 }
 
 const promises = [
-    'Promise valor',
+    'Promise values',
     wait('P2', 3000),
     wait('P3', 1000),
-    wait('aaa', 1500),
+    wait('50', 1500),
     wait('P4', 1000)
 ];
 
