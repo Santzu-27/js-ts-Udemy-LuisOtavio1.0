@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color: rgb(62, 75, 255);
+    font-family:  Verdana, sans-serif;
+    font-size: 1.6rem;
+}
+main{
+    text-align: center;
+    margin: 2em auto;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.945);
+    padding: 4%;
+    border-radius: 9%;
+}
+h1{
+    font-size: 3rem;
+}
