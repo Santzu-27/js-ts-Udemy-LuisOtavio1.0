@@ -1,36 +1,7 @@
-document.addEventListener("click", (e) => {
-  const el = e.target;
-  const tag = el.tagName.toLowerCase();
-  if (tag === "a") {
-    e.preventDefault();
-    loadPage(el);
-  }
-});
-async function loadPage(e) {
-  try {
-    const href = e.getAttribute("href");
+fetch('assets/json/pessoas.json')
+  .then(response => response.json())
+  .then(json => loadElementsInPage(json))
 
-    const response = await fetch(href);
-    const html = await response.text();
-    if(response.status !==200) throw new Error('Errinho')
-
-    loadResult(html);
-  } catch (error) {
-    console.log('ERRO')
-    window.alert(error);
-  }
-
-  //   fetch(href)
-  //     .then((response) => response.text())
-  //     .then((responseHTML) => {
-  //       loadResult(responseHTML);
-  //       alert("Funciionou");
-  //     })
-  //     .catch((e) => alert(e));
-}
-
-function loadResult(response) {
-  const result = document.querySelector("#result");
-  console.log(response);
-  result.innerHTML = response;
+function loadElementsInPage(json){
+  
 }
