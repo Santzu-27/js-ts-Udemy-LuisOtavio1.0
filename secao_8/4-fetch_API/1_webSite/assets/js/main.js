@@ -7,20 +7,26 @@ document.addEventListener("click", (e) => {
   }
 });
 async function loadPage(e) {
-  const href = e.getAttribute("href");
+  try {
+    const href = e.getAttribute("href");
 
-  const response = await fetch(href);
-  const html = await response.text();
-  
-  loadResult(html);
+    const response = await fetch(href);
+    const html = await response.text();
+    if(response.status !==200) throw new Error('Errinho')
 
-//   fetch(href)
-//     .then((response) => response.text())
-//     .then((responseHTML) => {
-//       loadResult(responseHTML);
-//       alert("Funciionou");
-//     })
-//     .catch((e) => alert(e));
+    loadResult(html);
+  } catch (error) {
+    console.log('ERRO')
+    window.alert(error);
+  }
+
+  //   fetch(href)
+  //     .then((response) => response.text())
+  //     .then((responseHTML) => {
+  //       loadResult(responseHTML);
+  //       alert("Funciionou");
+  //     })
+  //     .catch((e) => alert(e));
 }
 
 function loadResult(response) {
