@@ -16,8 +16,8 @@ async function loadPage(e) {
 
     loadResult(html);
   } catch (error) {
-    console.warn('ERRO')
-    window.alert('Erro proposital para testes: '+ error);
+    console.log('ERRO')
+    window.alert(error);
   }
 
   //   fetch(href)
