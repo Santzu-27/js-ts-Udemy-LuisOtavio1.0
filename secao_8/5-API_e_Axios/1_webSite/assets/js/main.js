@@ -1,6 +1,9 @@
-fetch('assets/json/pessoas.json')
-  .then(response => response.json())
-  .then(json => loadElementsInPage(json))
+// fetch('assets/json/pessoas.json')
+//   .then(response => response.json())
+//   .then(json => loadElementsInPage(json))
+
+axios('assets/json/pessoas.json')
+  .then(response => loadElementsInPage(response.data))
 
 function loadElementsInPage(json){
   const table = document.createElement('table');
@@ -20,7 +23,18 @@ function loadElementsInPage(json){
   
   for (const person of json) {
     let tr = document.createElement('tr')
-    let td = document.createElement('td')
+    let tdName = document.createElement('td')
+    let tdAge = document.createElement('td')
+    let tdSalary = document.createElement('td')
+
+    tdSalary.innerHTML = person.salario
+    tdAge.innerHTML = person.idade
+    tdName.innerHTML = person.nome
+    tr.appendChild(tdName);
+    tr.appendChild(tdAge);
+    tr.appendChild(tdSalary);
+
+    table.appendChild(tr);
     
   }
   const result = document.querySelector('#result')
