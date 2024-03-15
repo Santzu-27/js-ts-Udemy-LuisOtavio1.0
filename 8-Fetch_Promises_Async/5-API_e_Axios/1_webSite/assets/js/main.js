@@ -40,4 +40,5 @@ function loadElementsInPage(json){
   const result = document.querySelector('#result')
   result.appendChild(table);
 }
+
 // loadElementsInPage()
